@@ -112,33 +112,26 @@ def transform_daily_to_monthly(data):
     Returns: a list of lists, where each sublist represents data
         for a whole month.
     ''' 
-    month={
-        "october": [],
+    monthly={
+        "october": [0],
         "november":[],
         "december": [],
         "january" :[],
-        "february" : [],
+        "february" :[],
         "march": []
     }
     
-    for month in data: 
-        date = convert_mmddyyyy_date(row[0])
+    for line in data[1:]:
+        date = convert_mmddyyyy_date(line[0])
         month = get_month_name(date)
-        if month == "october":
-            october = october+date
-        elif month == "november":
-            november = november+date
-        elif month == "december":
-            december = december+date
-        elif month =="january":
-            january = january+date
-        elif month == "february":
-            february = february+date
-        elif month == "march":
-            march = march+date
-
-    for month in column:
-        t_nests+= int(n[1])
+        print(month)
+        if month == "October":
+            print(monthly ["october"][0])
+            monthly["october"][0] = monthly["october"][0] + int(line[1]) + int(line[2])
+        if month not in monthly():
+            monthly [month] = 0
+    print(monthly)
+        
 
 
     #  get the date for the row
@@ -353,7 +346,7 @@ def transform_daily_to_monthly(data):
 
 if __name__ == "__main__":
     all_data = read_csv_file('data/2020_2021_turtle_data.csv')
-    # print(all_data)
+    
     monthly_data = transform_daily_to_monthly(all_data)
 
     print('2020/2021 Flatback Turtle Migration at Cemetery Beach')

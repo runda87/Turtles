@@ -9,12 +9,6 @@ with open("data/2020_2021_turtle_data.csv", encoding="utf-8") as csv_file:
         turtle20_21.append(line)
 
 
-# i = 0
-# while i < len(turtle20_21):
-#     print(f"{turtle20_21[i][0]} {turtle20_21[i][1]} {turtle20_21[i][2]} {turtle20_21[i][3]} {turtle20_21[i][4]} {turtle20_21[i][5]}")
-#     i = i + 1
-
-
 totals = turtle20_21[1:13]
 oct_nest = []
 oct_false_crawls_count = []
@@ -220,12 +214,12 @@ print()
 print()
 print(f"Monthly Statistics:")
 print(f"Months      Nests   Hatched Nests   False Crawls    Hit Rocks   Nest Predation")
-print(f"October     {oct_n}     {oct_hn}        {oct_fc}        {oct_hr}        {oct_np} ")
+print(f"October     {oct_n}       {oct_hn}        {oct_fc}        {oct_hr}        {oct_np} ")
 print(f"November    {nov_n}     {nov_hn}        {nov_fc}        {nov_hr}        {nov_np} ")
 print(f"December    {dec_n}     {dec_hn}        {dec_fc}        {dec_hr}        {dec_np} ")
-print(f"January     {jan_n}     {jan_hn}        {jan_fc}        {jan_hr}        {jan_np} ")
-print(f"Feburay     {feb_n}     {feb_hn}        {feb_fc}        {feb_hr}        {feb_np} ")
-print(f"March       {mar_n}     {mar_hn}        {mar_fc}        {mar_hr}        {mar_np} ")
+print(f"January     {jan_n}       {jan_hn}        {jan_fc}        {jan_hr}        {jan_np} ")
+print(f"Feburay     {feb_n}       {feb_hn}        {feb_fc}        {feb_hr}        {feb_np} ")
+print(f"March       {mar_n}       {mar_hn}        {mar_fc}        {mar_hr}        {mar_np} ")
 print()
 print()
 print(f"Overall:")
@@ -234,3 +228,5 @@ print(f" Hatched Nests - {total_hn}")
 print(f" False Crawls - {total_fc}")
 print(f" Hit Rocks - {total_hr}")
 print(f" Nest Predation - {total_np}")
+print()
+print()
